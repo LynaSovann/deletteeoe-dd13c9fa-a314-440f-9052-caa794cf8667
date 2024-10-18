@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deletteeoe-dd13c9fa-a314-440f-9052-caa794cf8667-deployment
+  labels:
+    app: deletteeoe-dd13c9fa-a314-440f-9052-caa794cf8667
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deletteeoe-dd13c9fa-a314-440f-9052-caa794cf8667
+  template:
+    metadata:
+      labels:
+        app: deletteeoe-dd13c9fa-a314-440f-9052-caa794cf8667
+    spec:
+      containers:
+        - name: deletteeoe-dd13c9fa-a314-440f-9052-caa794cf8667-container
+          image: pipejet/deletteeoe-dd13c9fa-a314-440f-9052-caa794cf8667
+          ports:
+            - containerPort: 8080
